@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassRoom - Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khiln/OhmyfoodV2.git"
+  },
+  "author": "Giovanni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khiln/OhmyfoodV2/issues"
+  },
+  "homepage": "https://github.com/Khiln/OhmyfoodV2#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}
