@@ -1,0 +1,11 @@
+.ville {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAEAEA;
+    padding: 0.5rem;
+     & i {
+        font-size: 1.3rem;
+    }
+}

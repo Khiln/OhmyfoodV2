@@ -18,7 +18,7 @@ header {
   position: relative;
 }
 
-main .ville {
+.ville {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -26,8 +26,7 @@ main .ville {
   background-color: #EAEAEA;
   padding: 0.5rem;
 }
-
-main .ville i {
+.ville i {
   font-size: 1.3rem;
 }
 
@@ -35,16 +34,13 @@ main .ville i {
 .explorer {
   text-align: center;
 }
-
 .explorer h2 {
   margin-top: 2rem;
   font-size: 1.7rem;
 }
-
 .explorer p {
   font-size: 1rem;
 }
-
 .explorer button {
   color: white;
   font-weight: 300;
@@ -57,7 +53,6 @@ main .ville i {
   transition: transform 200ms;
   margin-top: 1rem;
 }
-
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
