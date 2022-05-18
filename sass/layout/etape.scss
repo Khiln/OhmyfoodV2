@@ -1,23 +1,46 @@
 @use "../../utils/mixin";
+@use "../layout/variable";
 
 .etape {
+    counter-reset: count;
     & ol {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        @media (max-width: 800){
+        gap: 2rem;
+        list-style-type: none;
+        @media (max-width: 1000px){
             flex-direction: column;
         }
     }
     & li {
+        position: relative;
+        &::before {
+            content:counter(count);
+            counter-increment: count;
+            color: white;
+            background-color: variable.$primary;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            bottom: 1rem;
+            left: -1rem;
+
+        }
         background-color: #f6f6f6;
-        padding: 1rem 2rem;
+        padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
         @include mixin.box-s;
             &:hover{
                 @include mixin.zoom;
             }
+    }
+    & i.fas {
+        margin-right: 1rem;
+        color:#7E7E7E;
+        font-size: 1.3rem;
     }
 }
 

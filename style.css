@@ -62,25 +62,48 @@ header {
   opacity: 0.9;
 }
 
+.etape {
+  counter-reset: count;
+}
 .etape ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  list-style-type: none;
 }
-@media (max-width: 800) {
+@media (max-width: 1000px) {
   .etape ol {
     flex-direction: column;
   }
 }
 .etape li {
+  position: relative;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
   box-shadow: 2px 1px 8px -3px #CFCFCF;
 }
+.etape li::before {
+  content: counter(count);
+  counter-increment: count;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
 .etape li:hover {
   transform: scale(1.02);
+}
+.etape i.fas {
+  margin-right: 1rem;
+  color: #7E7E7E;
+  font-size: 1.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
