@@ -1,4 +1,7 @@
-@import 'sass/base';
-@import 'layout/header';
-@import 'layout/ville';
-@import 'layout/explorer';
+@use 'sass/base';
+@use 'sass/layout/header';
+@use 'sass/layout/ville';
+@use 'sass/layout/explorer';
+@use 'sass/layout/etape';
+
+
