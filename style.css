@@ -13,6 +13,11 @@ main {
   padding: 0 1rem;
 }
 
+h2 {
+  padding: 2rem 0;
+  margin: 0;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -39,7 +44,6 @@ header {
   text-align: center;
 }
 .explorer h2 {
-  margin-top: 2rem;
   font-size: 1.7rem;
 }
 .explorer p {
@@ -104,6 +108,37 @@ header {
   margin-right: 1rem;
   color: #7E7E7E;
   font-size: 1.3rem;
+}
+
+.menus {
+  background-color: #f6f6f6;
+}
+.menus__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .menus__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menus .card__image {
+  border-radius: 1rem;
+  background-size: cover;
+  height: 15rem;
+}
+.menus .card__image1 {
+  background-image: url("../../img/palette.jpg");
+}
+.menus .card__image2 {
+  background-image: url("../../img/note.jpg");
+}
+.menus .card__image3 {
+  background-image: url("../../img/francaise.jpg");
+}
+.menus .card__image4 {
+  background-image: url("../../img/delice.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */

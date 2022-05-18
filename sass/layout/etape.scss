@@ -1,5 +1,5 @@
 @use "../../utils/mixin";
-@use "../layout/variable";
+@use "../../utils/variable";
 
 .etape {
     counter-reset: count;
@@ -7,7 +7,7 @@
         display: flex;
         gap: 2rem;
         list-style-type: none;
-        @media (max-width: 1000px){
+        @media (max-width: variable.$breakpoint){
             flex-direction: column;
         }
     }

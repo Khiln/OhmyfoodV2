@@ -1,0 +1,35 @@
+@use '../../utils/variable';
+
+.menus {
+    background-color: variable.$background;
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            @media (max-width: variable.$breakpoint){
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+    }
+    .card {
+        &__image {
+        border-radius: 1rem;   
+        background-size: cover;
+        height: 15rem;
+       }
+       &__image1 {
+        background-image: url("../../img/palette.jpg");
+       }
+       &__image2 {
+        background-image: url("../../img/note.jpg");
+       }
+       &__image3 {
+        background-image: url("../../img/francaise.jpg");
+       }
+       &__image4 {
+        background-image: url("../../img/delice.jpg");
+       }
+    
+    }
+}
