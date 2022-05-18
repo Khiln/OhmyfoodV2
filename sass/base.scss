@@ -13,9 +13,24 @@ body {
 
 main {
     padding: 0 1rem;
+    @media (max-width: 1000px) {
+        padding: 0rem;
+    }
 }
 
 h2 {
     padding: 2rem 0;
     margin:0;
 }
+h3{
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p{
+    margin:0;
+}
+

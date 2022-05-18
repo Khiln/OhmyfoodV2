@@ -1,0 +1,15 @@
+@use '../../utils/variable';
+
+footer {
+    background-color: variable.$footer_color;
+    padding: 0 2rem;
+    color: #FFFFFF;
+    h2 {
+        font-family: "Shrikhand", cursive;
+        font-weight: 500;
+        padding: 1rem 0;
+    }
+    p {
+        padding: 0.3rem;
+    }
+}
