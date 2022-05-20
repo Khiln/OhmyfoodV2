@@ -74,10 +74,10 @@ header {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
   transition: transform 200ms;
   margin-top: 1rem;
   box-shadow: 2px 1px 8px -3px #CFCFCF;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -192,6 +192,18 @@ header {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+.menus .card__description .fas {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms;
+}
+.menus .card__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
 }
 
 footer {
