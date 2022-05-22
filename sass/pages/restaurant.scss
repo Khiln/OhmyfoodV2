@@ -1,66 +1,139 @@
 @use '../../utils/mixin';
 @use '../../utils/variable';
-.banner img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-    object-position: top;
-}
+@use '../../utils/animations';
 
-main {
-    padding:0 ;}
+    
+    .banner img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        object-position: top;
+    }
+    
+    main {
+        padding:0 ;
+    }
+    
+    h2 {
+        font-family: "Shrikhand", cursive;
+        padding: 1rem;
+    }
 
-main h2 {
-    font-family: "Shrikhand", cursive;
 
-}
-
-.title-palette {
-    position: relative;
-    border-radius: 1rem 1rem 0 0;
-    margin-top: -1rem;
-    background-color: white;
-}
-
-.title-palette i {
-    font-size: 1.75rem;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-     .title-palette .fas {
-        color: transparent;
-        @include mixin.gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        opacity: 0;
-        transition: all 200ms;
-        
-        &:hover{
-            opacity: 1;
-            transform: translateY(-50%) scale(1.2);
+    .resto-main {
+        padding:0 2rem;
+        background-color:variable.$background;
+    
         }
-     }
-
-.menu-grid{
-    background-color: yellow;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3,1fr);
-    @media (max-width: variable.$breakpoint) {
-        grid-template-columns: 1fr;
-    & > *{
-        border: 1px solid red;
+        
+ 
+    
+    .title-palette {
+        position: relative;
+        border-radius: 1rem 1rem 0 0;
+        margin-top: -1rem;
+        background-color:variable.$background;
     }
     
+    .title-palette i {
+        font-size: 1.75rem;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+         .title-palette .fas {
+            color: transparent;
+            @include mixin.gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 200ms;
+            
+            &:hover{
+                opacity: 1;
+                transform: translateY(-50%) scale(1.2);
+            }
+         }
+    
+    .menus{
+        background-color:variable.$background;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3,1fr);
+        @media (max-width: variable.$breakpoint) {
+            grid-template-columns: 1fr;
+        .menus__categorie{
+            background-color: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            
+                h4 {
+                    padding: 1rem 0 0 1rem;
+                    margin: 0;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                p{
+                    padding: 0.5rem 0 1rem  1rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                .menu-item {
+                    display: flex;
+                    overflow: hidden;
+                    @include mixin.box-s;
+                    border-radius: 0 1rem 1rem 0;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    &__prix {
+                        display: flex;
+                        align-items: end;
+                        margin-left: auto;
+                        font-weight: 900;
+                        padding: 0 2rem 1rem 0;
+                    }
+                    &__description {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    &__check{
+                        width: 4rem;
+                        background-color: variable.$tertiary;
+                        margin-right: -4rem;
+                        border-radius: 0 1rem 1rem 0;
+                        transition: margin-right 0.5s;
+                        display: grid;
+                        place-items: center;
+                        i {
+                        display: grid;
+                        place-items: center;
+                        background: white;                       
+                        border-radius: 1rem;
+                        width: 2rem;
+                        aspect-ratio: 1;
+                        color: variable.$tertiary;
+                        }
+                    }
+                    &:hover .menu-item__check {
+                        margin-right: 0;
+                        i {
+                            animation: rotation 0.5s ease-in;
+                         }
+                    }
+
+                }
+        }
+        
+    
+    }
+    
+  
 
 }
 
-.resto-main {
-    padding:0 2rem;
-
-    }
-    
-}
