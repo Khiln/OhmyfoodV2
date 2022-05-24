@@ -288,6 +288,12 @@ h2 {
   .menus {
     grid-template-columns: 1fr;
   }
+  .menus .trait {
+    height: 3px;
+    width: 50px;
+    background-color: #99E2D0;
+    margin: 7px 0 15px 15px;
+  }
   .menus .menus__categorie {
     background-color: white;
     border-radius: 1rem;
