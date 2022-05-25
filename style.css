@@ -79,6 +79,7 @@ header {
   margin-top: 1rem;
   box-shadow: 2px 1px 8px -3px #CFCFCF;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
+  cursor: pointer;
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -236,6 +237,16 @@ footer p {
   object-position: top;
 }
 
+header {
+  position: relative;
+}
+header .fas.fa-arrow-left {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 main {
   padding: 0;
 }
@@ -248,6 +259,41 @@ h2 {
 .resto-main {
   padding: 0 2rem;
   background-color: #f6f6f6;
+}
+.resto-main h3 {
+  font-weight: 400;
+  position: relative;
+}
+.resto-main h3::after {
+  content: "";
+  position: absolute;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  left: 1rem;
+  top: 1.6rem;
+  width: 3rem;
+}
+.resto-main .bouton-commander {
+  height: 15vh;
+  display: grid;
+  place-items: center;
+}
+.resto-main .bouton-commander button {
+  color: white;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 200ms;
+  margin-top: 1rem;
+  box-shadow: 2px 1px 8px -3px #CFCFCF;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  cursor: pointer;
+}
+.resto-main .bouton-commander button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 .title-palette {
@@ -288,12 +334,6 @@ h2 {
   .menus {
     grid-template-columns: 1fr;
   }
-  .menus .trait {
-    height: 3px;
-    width: 50px;
-    background-color: #99E2D0;
-    margin: 7px 0 15px 15px;
-  }
   .menus .menus__categorie {
     background-color: white;
     border-radius: 1rem;
@@ -319,6 +359,9 @@ h2 {
     border-radius: 0 1rem 1rem 0;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+  .menus .menus__categorie .menu-item:hover {
+    cursor: pointer;
   }
   .menus .menus__categorie .menu-item__prix {
     display: flex;

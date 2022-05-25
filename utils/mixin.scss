@@ -1,3 +1,4 @@
+
 @mixin box-s {
     box-shadow: 2px 1px 8px -3px #CFCFCF;
 }
@@ -10,3 +11,18 @@
 @mixin gradient {
     background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
+
+@mixin bouton {
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    transition: transform 200ms;
+    margin-top: 1rem;
+    box-shadow: 2px 1px 8px -3px #CFCFCF;
+    background-image: linear-gradient(to top, #9356dc, #ff79da);
+    cursor:pointer;
+}
+

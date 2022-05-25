@@ -8,6 +8,17 @@
         height: 80vh;
         object-fit: cover;
         object-position: top;
+
+    }
+
+    header {
+        position:relative;
+        .fas.fa-arrow-left{
+            position:absolute;
+            left: 1rem;
+            top:50%;
+            transform: translateY(-50%);
+        }
     }
     
     main {
@@ -20,11 +31,37 @@
     }
 
 
+
     .resto-main {
+        h3 {
+            font-weight: 400;
+            position:relative;
+            &::after{
+                content:"";
+                position:absolute;
+                height: 0.25rem;
+                background-color: variable.$tertiary;
+                left:1rem;
+                top:1.6rem;
+                width: 3rem;
+            }   
+        }  
         padding:0 2rem;
         background-color:variable.$background;
-    
+
+        .bouton-commander{
+            height: 15vh;
+            display: grid;
+            place-items: center;
+            button {
+                @include mixin.bouton;
+                &:hover {
+                    @include mixin.zoom;
+                    opacity: 0.9;
+            }
+            }
         }
+    }
         
  
     
@@ -49,12 +86,11 @@
             background-clip: text;
             -webkit-background-clip: text;
             opacity: 0;
-            transition: all 200ms;
-            
-            &:hover{
-                opacity: 1;
-                transform: translateY(-50%) scale(1.2);
-            }
+            transition: all 200ms;      
+                &:hover{
+                    opacity: 1;
+                    transform: translateY(-50%) scale(1.2);
+                }
          }
     
     .menus{
@@ -64,12 +100,6 @@
         grid-template-columns: repeat(3,1fr);
         @media (max-width: variable.$breakpoint) {
             grid-template-columns: 1fr;
-            .trait{
-                height: 3px;
-                width: 50px;
-                background-color: #99E2D0;
-                margin: 7px 0 15px 15px;
-            }  
         .menus__categorie{
             background-color: white;
             border-radius: 1rem;
@@ -95,6 +125,9 @@
                     border-radius: 0 1rem 1rem 0;
                     white-space: nowrap;
                     text-overflow: ellipsis;
+                    &:hover{
+                        cursor: pointer;
+                    }
                     &__prix {
                         display: flex;
                         align-items: end;
@@ -142,4 +175,3 @@
   
 
 }
-
