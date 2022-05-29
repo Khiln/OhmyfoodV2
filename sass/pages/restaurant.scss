@@ -100,10 +100,19 @@
         grid-template-columns: repeat(3,1fr);
         @media (max-width: variable.$breakpoint) {
             grid-template-columns: 1fr;
+ 
+
         .menus__categorie{
             background-color: white;
             border-radius: 1rem;
             overflow: hidden;
+            animation: apparition 1s;
+            animation-fill-mode: both;
+            @for $i from 1 through 15 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 100ms * $i;
+                }
+            } 
             
                 h4 {
                     padding: 1rem 0 0 1rem;
@@ -121,11 +130,11 @@
                 .menu-item {
                     display: flex;
                     overflow: hidden;
-                    @include mixin.box-s;
                     border-radius: 0 1rem 1rem 0;
                     white-space: nowrap;
                     text-overflow: ellipsis;
-                    &:hover{
+                    @include mixin.box-s;           
+                        &:hover{
                         cursor: pointer;
                     }
                     &__prix {
