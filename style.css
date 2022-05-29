@@ -337,125 +337,125 @@ h2 {
 .menus {
   background-color: #f6f6f6;
   display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 @media (max-width: 1200px) {
   .menus {
     grid-template-columns: 1fr;
   }
-  .menus .menus__categorie {
-    background-color: white;
-    border-radius: 1rem;
-    overflow: hidden;
-    animation: apparition 1s;
-    animation-fill-mode: both;
-  }
-  .menus .menus__categorie:nth-child(1) {
-    animation-delay: 100ms;
-  }
-  .menus .menus__categorie:nth-child(2) {
-    animation-delay: 200ms;
-  }
-  .menus .menus__categorie:nth-child(3) {
-    animation-delay: 300ms;
-  }
-  .menus .menus__categorie:nth-child(4) {
-    animation-delay: 400ms;
-  }
-  .menus .menus__categorie:nth-child(5) {
-    animation-delay: 500ms;
-  }
-  .menus .menus__categorie:nth-child(6) {
-    animation-delay: 600ms;
-  }
-  .menus .menus__categorie:nth-child(7) {
-    animation-delay: 700ms;
-  }
-  .menus .menus__categorie:nth-child(8) {
-    animation-delay: 800ms;
-  }
-  .menus .menus__categorie:nth-child(9) {
-    animation-delay: 900ms;
-  }
-  .menus .menus__categorie:nth-child(10) {
-    animation-delay: 1000ms;
-  }
-  .menus .menus__categorie:nth-child(11) {
-    animation-delay: 1100ms;
-  }
-  .menus .menus__categorie:nth-child(12) {
-    animation-delay: 1200ms;
-  }
-  .menus .menus__categorie:nth-child(13) {
-    animation-delay: 1300ms;
-  }
-  .menus .menus__categorie:nth-child(14) {
-    animation-delay: 1400ms;
-  }
-  .menus .menus__categorie:nth-child(15) {
-    animation-delay: 1500ms;
-  }
-  .menus .menus__categorie h4 {
-    padding: 1rem 0 0 1rem;
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .menus .menus__categorie p {
-    padding: 0.5rem 0 1rem 1rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .menus .menus__categorie .menu-item {
-    display: flex;
-    overflow: hidden;
-    border-radius: 0 1rem 1rem 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    box-shadow: 2px 1px 8px -3px #CFCFCF;
-  }
-  .menus .menus__categorie .menu-item:hover {
-    cursor: pointer;
-  }
-  .menus .menus__categorie .menu-item__prix {
-    display: flex;
-    align-items: end;
-    margin-left: auto;
-    font-weight: 900;
-    padding: 0 2rem 1rem 0;
-  }
-  .menus .menus__categorie .menu-item__description {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .menus .menus__categorie .menu-item__check {
-    width: 4rem;
-    background-color: #99E2D0;
-    margin-right: -4rem;
-    border-radius: 0 1rem 1rem 0;
-    transition: margin-right 0.5s;
-    display: grid;
-    place-items: center;
-  }
-  .menus .menus__categorie .menu-item__check i {
-    display: grid;
-    place-items: center;
-    background: white;
-    border-radius: 1rem;
-    width: 2rem;
-    aspect-ratio: 1;
-    color: #99E2D0;
-  }
-  .menus .menus__categorie .menu-item:hover .menu-item__check {
-    margin-right: 0;
-  }
-  .menus .menus__categorie .menu-item:hover .menu-item__check i {
-    animation: rotation 0.5s ease-in;
-  }
+}
+.menus__categorie {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  animation: apparition 1s;
+  animation-fill-mode: both;
+}
+.menus__categorie:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menus__categorie:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menus__categorie:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menus__categorie:nth-child(4) {
+  animation-delay: 400ms;
+}
+.menus__categorie:nth-child(5) {
+  animation-delay: 500ms;
+}
+.menus__categorie:nth-child(6) {
+  animation-delay: 600ms;
+}
+.menus__categorie:nth-child(7) {
+  animation-delay: 700ms;
+}
+.menus__categorie:nth-child(8) {
+  animation-delay: 800ms;
+}
+.menus__categorie:nth-child(9) {
+  animation-delay: 900ms;
+}
+.menus__categorie:nth-child(10) {
+  animation-delay: 1000ms;
+}
+.menus__categorie:nth-child(11) {
+  animation-delay: 1100ms;
+}
+.menus__categorie:nth-child(12) {
+  animation-delay: 1200ms;
+}
+.menus__categorie:nth-child(13) {
+  animation-delay: 1300ms;
+}
+.menus__categorie:nth-child(14) {
+  animation-delay: 1400ms;
+}
+.menus__categorie:nth-child(15) {
+  animation-delay: 1500ms;
+}
+.menus__categorie h4 {
+  padding: 1rem 0 0 1rem;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menus__categorie p {
+  padding: 0.5rem 0 1rem 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menus__categorie .menu-item {
+  display: flex;
+  overflow: hidden;
+  border-radius: 0 1rem 1rem 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-shadow: 2px 1px 8px -3px #CFCFCF;
+}
+.menus__categorie .menu-item:hover {
+  cursor: pointer;
+}
+.menus__categorie .menu-item__prix {
+  display: flex;
+  align-items: end;
+  margin-left: auto;
+  font-weight: 900;
+  padding: 0 2rem 1rem 0;
+}
+.menus__categorie .menu-item__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menus__categorie .menu-item__check {
+  width: 4rem;
+  background-color: #99E2D0;
+  margin-right: -4rem;
+  border-radius: 0 1rem 1rem 0;
+  transition: margin-right 0.5s;
+  display: grid;
+  place-items: center;
+}
+.menus__categorie .menu-item__check i {
+  display: grid;
+  place-items: center;
+  background: white;
+  border-radius: 1rem;
+  width: 2rem;
+  aspect-ratio: 1;
+  color: #99E2D0;
+}
+.menus__categorie .menu-item:hover .menu-item__check {
+  margin-right: 0;
+}
+.menus__categorie .menu-item:hover .menu-item__check i {
+  animation: rotation 0.5s ease-in;
 }
 
 /*# sourceMappingURL=style.css.map */
